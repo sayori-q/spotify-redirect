@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<title>Current track API</title>
+<center>
+<h1>Ваша ссылка:</h1>
+<button type="button" id="copy_button">Скопировать</button>
+<h2 id="current_url"></h2>
+</center>
+<script>
+window.onload = function() {
+        document.getElementById("current_url").innerHTML = "<a href='" + location.href + "'>" + location.href + "</a>";
+	document.getElementById("copy_button").onclick = function() {
+		navigator.clipboard.writeText(location.href);
+		alert("Скопировано!");
+	};
+};
+</script>
